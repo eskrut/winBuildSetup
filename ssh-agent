@@ -1,0 +1,10 @@
+#add in bashrc or bash_profile
+
+export SSH_AUTH_SOCK=/tmp/.ssh-socket
+ssh-add -l > /dev/null
+if [ $? = 2 ]; then
+	rm -f $SSH_AUTH_SOCK
+	echo Starting new ssh-agent...
+	eval $(ssh-agent -a $SSH_AUTH_SOCK) > /dev/null
+	ssh-add && echo "ssh-agent set up successfully with the following keys:" && ssh-add -l
+fi

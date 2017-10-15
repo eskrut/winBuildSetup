@@ -6,6 +6,7 @@ pacman -S --needed \
 	base-devel \
 	zlib \
 	tmux \
+	libxml2-devel \
 	$arch-toolchain \
 	$arch-cmake \
 	$arch-boost \

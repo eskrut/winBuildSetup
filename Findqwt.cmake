@@ -88,8 +88,12 @@ find_library ( QWT_LIBRARY
   PATHS c:/qwt/lib
 )
 
-set ( QWT_LIBRARIES ${QWT_LIBRARY} )
-
+find_library ( QWT_LIBRARY_DEBUG
+  NAMES qwtd
+  HINTS ${QT_LIBRARY_DIR}
+  PATHS /opt/local/qwt/lib
+  PATHS c:/qwt/lib
+)
 
 # try to guess root dir from include dir
 if ( QWT_INCLUDE_DIR )
@@ -103,15 +107,15 @@ endif ()
 # handle the QUIETLY and REQUIRED arguments
 include ( FindPackageHandleStandardArgs )
 if ( CMAKE_VERSION LESS 2.8.3 )
-  find_package_handle_standard_args( Qwt DEFAULT_MSG QWT_LIBRARY QWT_INCLUDE_DIR _QWT_VERSION_MATCH )
+  find_package_handle_standard_args( Qwt DEFAULT_MSG QWT_LIBRARY QWT_LIBRARY_DEBUG QWT_INCLUDE_DIR _QWT_VERSION_MATCH )
 else ()
-  find_package_handle_standard_args( Qwt REQUIRED_VARS QWT_LIBRARY QWT_INCLUDE_DIR _QWT_VERSION_MATCH VERSION_VAR QWT_VERSION_STRING )
+  find_package_handle_standard_args( Qwt REQUIRED_VARS QWT_LIBRARY QWT_LIBRARY_DEBUG QWT_INCLUDE_DIR _QWT_VERSION_MATCH VERSION_VAR QWT_VERSION_STRING )
 endif ()
 
 
 mark_as_advanced (
-  QWT_LIBRARY 
-  QWT_LIBRARIES
+  QWT_LIBRARY
+  QWT_LIBRARY_DEBUG
   QWT_INCLUDE_DIR
   QWT_INCLUDE_DIRS
   QWT_MAJOR_VERSION

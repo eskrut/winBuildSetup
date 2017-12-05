@@ -1,0 +1,3 @@
+https://notepad-plus-plus.org/download/
+https://download.gnome.org/binaries/win32/meld/
+

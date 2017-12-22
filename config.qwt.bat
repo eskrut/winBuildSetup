@@ -10,6 +10,6 @@ reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /
 
 reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v QWT_ROOT /t REG_SZ /d "%QWT_ROOT%"
 
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v PATH /t REG_SZ /d "%QWT_LIB%;%path%"
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v PATH /t REG_SZ /f /d "%QWT_LIB%;%path%"
 
 call update.env.bat

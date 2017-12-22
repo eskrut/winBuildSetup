@@ -1,6 +1,6 @@
 #should be run under msys2 shell
 
-#run patch
+echo run patch
 cmd /c patch_msys2.cmd
 
 ./config.git.sh
@@ -11,11 +11,11 @@ else
 	echo ssh key exists. skip creation
 fi
 
-#upgrade
+echo upgrade
 ./first.sh
 
-#update
+echo update
 ./buildStuff.sh
 
-#get sources
+echo get sources
 ./srcs.sh

@@ -4,7 +4,7 @@ cd $SRC_DIR
 if [ -d "${SRC_DIR}/qwt" ] ; then
     echo "qwt exist skip"
 else
-    svn export svn://svn.code.sf.net/p/qwt/code/trunk/qwt
+    svn co http://svn.code.sf.net/p/qwt/code/trunk/qwt
 fi
 
 if [ -d "${SRC_DIR}/libsbf" ] ; then

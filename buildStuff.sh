@@ -27,5 +27,6 @@ pacman -S --needed \
 	$arch-vtk \
 	$arch-metis \
 	$arch-eigen3 \
+    $arch-gnuplot \
 	zip unzip p7zip
 

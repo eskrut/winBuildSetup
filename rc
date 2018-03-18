@@ -2,4 +2,5 @@ export BASE_DISK=/c
 export STUFF_ROOT_DIR=$BASE_DISK/winBuildSetup
 export SRC_DIR=$BASE_DISK/src
 export BUILD_DIR=$BASE_DISK/build
-export INSTALL_DIR=$BASE_DISK
+export INSTALL_DIR=$BASE_DISK/local
+

@@ -1,4 +1,3 @@
-export arch=mingw-w64-i686
 pacman -S --needed \
 	git \
 	subversion \

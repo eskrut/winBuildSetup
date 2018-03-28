@@ -4,3 +4,5 @@ https://download.gnome.org/binaries/win32/meld/
 https://drive.google.com/drive/folders/0B9YQ8Bq95Px2WmlMRkViWjQ4d1U?usp=sharing
 
 https://download.gimp.org/mirror/pub/gimp/v2.8/windows/gimp-2.8.22-setup.exe
+
+https://app.prntscr.com/build/setup-lightshot.exe

@@ -35,6 +35,13 @@ fi
   # rm vtk.zip
 # fi
 
+if [ -d "${SRC_DIR}/dlib" ] ; then
+    echo "dlib exist, pulling"
+    git -C dlib pull
+else
+    git clone https://github.com/davisking/dlib.git
+fi
+
 if [ -d "${SRC_DIR}/alglib" ] ; then
     echo "alglib exist, pulling"
     git -C alglib pull

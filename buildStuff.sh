@@ -10,6 +10,9 @@ pacman -S --needed \
 	libxml2-devel \
 	$arch-toolchain \
 	$arch-cmake \
+	$arch-extra-cmake-modules \
+	$arch-cmake-doc-qt \
+	$arch-cotire \
 	$arch-boost \
 	$arch-qt5 \
 	$arch-qt-creator \
@@ -27,6 +30,6 @@ pacman -S --needed \
 	$arch-vtk \
 	$arch-metis \
 	$arch-eigen3 \
-    $arch-gnuplot \
+	$arch-gnuplot \
 	zip unzip p7zip
 

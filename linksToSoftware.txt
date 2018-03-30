@@ -1,4 +1,6 @@
 https://notepad-plus-plus.org/download/
+https://www.microsoft.com/ru-RU/download/confirmation.aspx?id=48130
+https://www.visualstudio.com/ru/thank-you-downloading-visual-studio/?sku=Community&rel=15
 https://download.gnome.org/binaries/win32/meld/
 
 https://drive.google.com/drive/folders/0B9YQ8Bq95Px2WmlMRkViWjQ4d1U?usp=sharing

@@ -8,6 +8,10 @@ pacman -S --needed \
 	tmux \
 	libxml2-devel \
 	$arch-toolchain \
+	$arch-clang \
+	$arch-clang-analyzer \
+	$arch-clang-tools-extra \
+	$arch-compiler-rt \
 	$arch-cmake \
 	$arch-boost \
 	$arch-qt5 \

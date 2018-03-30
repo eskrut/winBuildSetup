@@ -49,6 +49,14 @@ else
     git clone git@77.244.215.97:cmir/alglib.git
 fi
 
+if [ -d "${SRC_DIR}/libfem" ] ; then
+    echo "libfem exist, pulling"
+    git -C libfem pull
+else
+    git clone git@77.244.215.97:cmir/libfem.git
+    git -C htData flow init
+fi
+
 if [ -d "${SRC_DIR}/htData" ] ; then
     echo "htData exist, pulling"
     git -C htData pull

@@ -35,11 +35,26 @@ fi
   # rm vtk.zip
 # fi
 
+if [ -d "${SRC_DIR}/dlib" ] ; then
+    echo "dlib exist, pulling"
+    git -C dlib pull
+else
+    git clone https://github.com/davisking/dlib.git
+fi
+
 if [ -d "${SRC_DIR}/alglib" ] ; then
     echo "alglib exist, pulling"
     git -C alglib pull
 else
     git clone git@77.244.215.97:cmir/alglib.git
+fi
+
+if [ -d "${SRC_DIR}/libfem" ] ; then
+    echo "libfem exist, pulling"
+    git -C libfem pull
+else
+    git clone git@77.244.215.97:cmir/libfem.git
+    git -C htData flow init
 fi
 
 if [ -d "${SRC_DIR}/htData" ] ; then

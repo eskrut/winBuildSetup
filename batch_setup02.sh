@@ -9,4 +9,6 @@ echo set path for doli
 
 ./build.sbf.sh
 
+./build.libfem.sh
+
 ./build.htSoft.sh

@@ -9,9 +9,7 @@
 find_path ( HTDATA_INCLUDE_DIR
   NAMES htdata2_diagram.h
   HINTS ${QT_INCLUDE_DIR}
-  PATHS /opt/local/htdata2/include
-  PATHS c:/src/htdata2/include
-  PATH_SUFFIXES htdata2
+  PATHS c:/src/htdata/include
 )
 
 set ( HTDATA_INCLUDE_DIRS ${HTDATA_INCLUDE_DIR} )
@@ -19,8 +17,7 @@ set ( HTDATA_INCLUDE_DIRS ${HTDATA_INCLUDE_DIR} )
 find_library ( HTDATA_LIBRARY
   NAMES htdata
   HINTS ${QT_LIBRARY_DIR}
-  PATHS /opt/local/qwt/lib
-  PATHS c:/build/htdata2
+  PATHS c:/build/htdata
 )
 
 set ( HTDATA_LIBRARIES ${HTDATA_LIBRARY} )

@@ -13,6 +13,9 @@ pacman -S --needed \
 	$arch-clang-tools-extra \
 	$arch-compiler-rt \
 	$arch-cmake \
+	$arch-extra-cmake-modules \
+	$arch-cmake-doc-qt \
+	$arch-cotire \
 	$arch-boost \
 	$arch-qt5 \
 	$arch-qt-creator \
@@ -30,5 +33,6 @@ pacman -S --needed \
 	$arch-vtk \
 	$arch-metis \
 	$arch-eigen3 \
+	$arch-gnuplot \
 	zip unzip p7zip
 

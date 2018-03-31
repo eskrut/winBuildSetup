@@ -1,6 +1,6 @@
 ::Setup DOLI stuff
 
-set DR=c:\doli
+set DR=c:\local\doli
 set DPER=%DR%\dope
 set DPELIB=%DPER%\DoPE
 set DPEINC=%DPER%\Include

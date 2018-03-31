@@ -1,6 +1,6 @@
 ::Setup QWT stuff
 
-set QWT_ROOT=c:\qwt
+set QWT_ROOT=c:\local\qwt
 set QWT_LIB=%QWT_ROOT%\lib
 set QWT_INCLUDE=%QWT_ROOT%\include
 

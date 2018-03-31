@@ -34,5 +34,7 @@ pacman -S --needed \
 	$arch-metis \
 	$arch-eigen3 \
 	$arch-gnuplot \
+	$arch-dlib \
+	$arch-proj \
 	zip unzip p7zip
 

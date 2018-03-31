@@ -3,7 +3,11 @@ https://www.microsoft.com/ru-RU/download/confirmation.aspx?id=48130
 https://www.visualstudio.com/ru/thank-you-downloading-visual-studio/?sku=Community&rel=15
 https://download.gnome.org/binaries/win32/meld/
 
-https://drive.google.com/drive/folders/0B9YQ8Bq95Px2WmlMRkViWjQ4d1U?usp=sharing
+#dope
+https://drive.google.com/open?id=1tcW-EvwE0TfVZUna2oMQcq-44qu-cgQk
+#uEye 64
+https://drive.google.com/open?id=11rzAUldhfOtt3JcaQcefE1D4EvuC_t5m
+
 
 https://download.gimp.org/mirror/pub/gimp/v2.8/windows/gimp-2.8.22-setup.exe
 

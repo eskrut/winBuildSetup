@@ -1,3 +1,7 @@
+echo !!!!!!!!!!!!!!!!!!!!
+echo DEPRECATED Use pacman provided DLIB
+echo !!!!!!!!!!!!!!!!!!!!
+
 . ./rc
 
 PROJECT=dlib

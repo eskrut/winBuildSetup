@@ -8,16 +8,16 @@
 
 find_path ( HTDATA_INCLUDE_DIR
   NAMES htdata2_diagram.h
-  HINTS ${QT_INCLUDE_DIR}
-  PATHS c:/src/htdata/include
+  PATHS $ENV{SRC_DIR}
+  PATH_SUFFIXES htdata/include
 )
 
 set ( HTDATA_INCLUDE_DIRS ${HTDATA_INCLUDE_DIR} )
 
 find_library ( HTDATA_LIBRARY
   NAMES htdata
-  HINTS ${QT_LIBRARY_DIR}
-  PATHS c:/build/htdata
+  PATHS $ENV{BUILD_DIR}
+  PATH_SUFFIXES htdata
 )
 
 set ( HTDATA_LIBRARIES ${HTDATA_LIBRARY} )

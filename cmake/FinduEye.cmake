@@ -6,10 +6,12 @@
 #  UEYE_LIBRARIES - aditional libraries
 #  UEYE_ROOT_DIR - root dir (ex. /usr/local)
 
+message($ENV{LOCAL_DIR} "${LOCAL_DIR}")
+
 find_path ( UEYE_INCLUDE_DIR
   NAMES uEye.h
-  HINTS ${QT_INCLUDE_DIR}
-  PATHS c:/local/uEye/include
+  PATHS $ENV{LOCAL_DIR}
+  PATH_SUFFIXES uEye/include
 )
 
 set ( UEYE_INCLUDE_DIRS ${UEYE_INCLUDE_DIR} )
@@ -19,8 +21,8 @@ SET(CMAKE_FIND_LIBRARY_SUFFIXES ".lib" ".dll")
 
 find_library ( UEYE_LIBRARY
   NAMES uEye_api
-  HINTS ${QT_LIBRARY_DIR}
-  PATHS c:/local/uEye/Lib
+  PATHS $ENV{LOCAL_DIR}
+  PATH_SUFFIXES uEye/Lib
 )
 
 set ( UEYE_LIBRARIES ${UEYE_LIBRARY} )

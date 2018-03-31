@@ -8,9 +8,8 @@
 
 find_path ( DOPE_INCLUDE_DIR
   NAMES DoPE.h
-  HINTS ${QT_INCLUDE_DIR}
-  PATHS c:/doli/dope/Include
-  PATH_SUFFIXES dope
+  PATHS $ENV{LOCAL_DIR}
+  PATH_SUFFIXES doli/include
 )
 
 set ( DOPE_INCLUDE_DIRS ${DOPE_INCLUDE_DIR} )
@@ -20,8 +19,8 @@ SET(CMAKE_FIND_LIBRARY_SUFFIXES ".lib" ".dll")
 
 find_library ( DOPE_LIBRARY
   NAMES DoPE
-  HINTS ${QT_LIBRARY_DIR}
-  PATHS c:/doli/dope/DoPE
+  PATHS $ENV{LOCAL_DIR}
+  PATH_SUFFIXES doli/lib
 )
 
 set ( DOPE_LIBRARIES ${DOPE_LIBRARY} )

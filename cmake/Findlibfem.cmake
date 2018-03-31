@@ -8,8 +8,8 @@
 
 find_path ( LIBFEM_INCLUDE_DIR
   NAMES MkeLib.h
-  HINTS ${QT_INCLUDE_DIR}
-  PATHS c:/src/libfem/
+  PATHS $ENV{SRC_DIR}
+  PATH_SUFFIXES libfem
 )
 
 set ( LIBFEM_INCLUDE_DIRS ${LIBFEM_INCLUDE_DIR} )
@@ -19,8 +19,8 @@ SET(CMAKE_FIND_LIBRARY_SUFFIXES ".lib" ".dll")
 
 find_library ( LIBFEM_LIBRARY
   NAMES libfem
-  HINTS ${QT_LIBRARY_DIR}
-  PATHS c:/build/libfem/
+  PATHS $ENV{BUILD_DIR}
+  PATH_SUFFIXES libfem
 )
 
 set ( LIBFEM_LIBRARIES ${LIBFEM_LIBRARY} )

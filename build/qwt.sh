@@ -1,6 +1,6 @@
 . ./rc
 
-patch /c/src/qwt/qwtconfig.pri qwtconfig.patch
+patch $SRC_DIR/qwt/qwtconfig.pri qwtconfig.patch
 
 PROJECT=qwt
 

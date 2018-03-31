@@ -45,10 +45,8 @@
 
 find_path ( QWT_INCLUDE_DIR
   NAMES qwt_plot.h
-  HINTS ${QT_INCLUDE_DIR}
-  PATHS /opt/local/qwt/include
-  PATHS c:/qwt/include
-  PATH_SUFFIXES qwt qwt-qt3 qwt-qt4 qwt-qt5
+  PATHS $ENV{LOCAL_DIR}
+  PATH_SUFFIXES qwt/include
 )
 
 set ( QWT_INCLUDE_DIRS ${QWT_INCLUDE_DIR} )
@@ -82,17 +80,15 @@ endif ()
 
 
 find_library ( QWT_LIBRARY
-  NAMES qwt qwt-qt3 qwt-qt4 qwt-qt5
-  HINTS ${QT_LIBRARY_DIR}
-  PATHS /opt/local/qwt/lib
-  PATHS c:/qwt/lib
+  NAMES qwt
+  PATHS $ENV{LOCAL_DIR}
+  PATH_SUFFIXES qwt/lib
 )
 
 find_library ( QWT_LIBRARY_DEBUG
   NAMES qwtd
-  HINTS ${QT_LIBRARY_DIR}
-  PATHS /opt/local/qwt/lib
-  PATHS c:/qwt/lib
+  PATHS $ENV{LOCAL_DIR}
+  PATH_SUFFIXES qwt/lib
 )
 
 # try to guess root dir from include dir

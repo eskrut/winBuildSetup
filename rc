@@ -1,5 +1,21 @@
-export BASE_DISK=/c
-export STUFF_ROOT_DIR=~/winBuildSetup
+
+if [ -f ~/.winbuildrc ];
+then
+	. ~/.winbuildrc
+fi
+
+if [ -z "$BASE_DISK" ];
+then
+    echo You should provide BASE_DISK env var.
+    echo ~/.winbuildrc is the best way to do it
+fi
+
+if [ -z "$STUFF_ROOT_DIR" ];
+then
+    echo You should provide STUFF_ROOT_DIR env var.
+    echo ~/.winbuildrc is the best way to do it
+fi
+
 export SRC_DIR=$BASE_DISK/src
 export BUILD_DIR=$BASE_DISK/build
 export INSTALL_DIR=$BASE_DISK/local

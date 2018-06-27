@@ -7,7 +7,7 @@ if [ -d "${SRC_DIR}/libfem" ] ; then
     git -C libfem pull
 else
     git clone git@77.244.215.97:cmir/libfem.git
-    git -C htData flow init
+    git -C libfem flow init
 fi
 
 cd $STUFF_ROOT_DIR

@@ -2,12 +2,11 @@
 mkdir -p $SRC_DIR
 cd $SRC_DIR || exit 0
 
-if [ -d "${SRC_DIR}/libfem" ] ; then
-    echo "libfem exist, pulling"
-    git -C libfem pull
+if [ -d "${SRC_DIR}/qwt" ] ; then
+    echo "qwt exist, pulling"
+    svn -u
 else
-    git clone git@77.244.215.97:cmir/libfem.git
-    git -C htData flow init
+    svn export svn://svn.code.sf.net/p/qwt/code/trunk/qwt
 fi
 
 cd $STUFF_ROOT_DIR

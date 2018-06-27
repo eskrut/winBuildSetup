@@ -20,3 +20,9 @@ export SRC_DIR=$BASE_DISK/src
 export BUILD_DIR=$BASE_DISK/build
 export INSTALL_DIR=$BASE_DISK/local
 export LOCAL_DIR=$INSTALL_DIR
+
+if [ -z "$COMPILE_CORES" ];
+then
+    #default compile cores
+	export COMPILE_CORES=4
+fi

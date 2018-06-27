@@ -13,7 +13,7 @@ cmake -G "MSYS Makefiles" \
     -Dgtest_build_tests=OFF \
 $SRC_DIR/$PROJECT \
 && \
-cmake --build . -- -j4 \
+cmake --build . -- -j$COMPILE_CORES \
 && \
 cmake --build . --target install
 

@@ -40,7 +40,7 @@ cmake \
 	-DVTK_USE_SYSTEM_LZMA=ON \
 $SRC_DIR/$PROJECT \
 &&
-make -j4 \
+make -j$COMPILE_CORES \
 &&
 make install
 

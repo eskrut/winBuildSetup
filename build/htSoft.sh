@@ -8,7 +8,7 @@ cmake -G "MSYS Makefiles" \
 	-DCMAKE_BUILD_TYPE=Release \
 $SRC_DIR/$PROJECT \
 && \
-cmake --build . -- -j4
+cmake --build . -- -j$COMPILE_CORES
 
 PROJECT=htSoft
 mkdir -p $BUILD_DIR/$PROJECT
@@ -24,6 +24,6 @@ cmake -G "MSYS Makefiles" \
 	-DDEV_MODE=On \
 $SRC_DIR/$PROJECT \
 && \
-cmake --build . -- -j4
+cmake --build . -- -j$COMPILE_CORES
 
 cd $STUFF_ROOT_DIR

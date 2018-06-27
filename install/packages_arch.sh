@@ -20,6 +20,7 @@ pacman -S --needed \
 	$arch-qt5 \
 	$arch-qt-creator \
 	$arch-python2 \
+	$arch-python2-pip \
 	$arch-ntldd \
 	$arch-hdf5 \
 	$arch-expat \
@@ -38,3 +39,6 @@ pacman -S --needed \
 	$arch-proj \
 	zip unzip p7zip
 
+#for downloading large files from gdrive
+pip install gdown
+pip install six

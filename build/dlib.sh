@@ -14,7 +14,7 @@ cmake -G "MSYS Makefiles" \
     -DCMAKE_INSTALL_PREFIX=$INSTALL_DIR/$PROJECT \
 $SRC_DIR/$PROJECT \
 && \
-cmake --build . -- -j4 \
+cmake --build . -- -j$COMPILE_CORES \
 && \
 cmake --build . --target install
 

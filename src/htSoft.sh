@@ -7,6 +7,7 @@ if [ -d "${SRC_DIR}/htData" ] ; then
     git -C htData pull
 else
     git clone git@77.244.215.97:cmir/htData.git
+	git -C htData flow init
     git -C htData checkout develop
     git -C htData submodule init
     git -C htData submodule update
@@ -19,7 +20,9 @@ if [ -d "${SRC_DIR}/htSoft" ] ; then
     # git -C htSoft submodule update
 else
     git clone git@77.244.215.97:cmir/htSoft.git
+	git -C htSoft flow init
     git -C htSoft checkout develop
+    git -C htSoft submodule init
     git -C htSoft submodule update
     git -C htSoft submodule foreach --recursive git reset --hard origin/HEAD
 fi

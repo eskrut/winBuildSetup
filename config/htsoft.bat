@@ -1,8 +1,6 @@
 ::Setup QWT stuff
 
-set HTDATA_LIB=c:\build\htData
-set HTDATA_INCLUDE=c:\src\htData\include
+set HTDATA_LIB=%BUILD_PATH%\htData
+set FEM_LIB=%BUILD_PATH%\libfem
 
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v PATH /t REG_SZ /d "%HTDATA_LIB%;%path%"
-
-call update.env.bat
+set SET_AS_PATH=%HTDATA_LIB%;%FEM_LIB%;%SET_AS_PATH%

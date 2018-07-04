@@ -1,18 +1,13 @@
 ::Setup DOLI stuff
 
-set DR=c:\local\doli
-set DPER=%DR%\dope
-set DPELIB=%DPER%\DoPE
-set DPEINC=%DPER%\Include
+set DOPE_ROOT=%LOCAL_PATH%\doli
+set DOPE_LIB=%DOPE_ROOT%\lib
+set DOPE_INCLUDE=%DOPE_ROOT%\include
 
 ::clean
 
-reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v DOLI_ROOT /f
-reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v DOLI_DOPE_ROOT /f
+reg delete %REG_ENV_KEY% /v DOPE_ROOT /f
 
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v DOLI_ROOT /t REG_SZ /d "%DR%"
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v DOLI_DOPE_ROOT /t REG_SZ /d "%DPER%"
+reg add %REG_ENV_KEY% /v DOPE_ROOT /t REG_SZ /d "%DOPE_ROOT%"
 
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v PATH /t REG_SZ /f /d "%DPELIB%;%path%"
-
-call update.env.bat
+set SET_AS_PATH=%DOPE_LIB%;%SET_AS_PATH%

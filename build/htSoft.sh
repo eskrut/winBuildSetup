@@ -22,6 +22,7 @@ cmake -G "MSYS Makefiles" \
 	-DUSE_REPORTER=On \
 	-DUSE_FANN=Off \
 	-DDEV_MODE=On \
+	-DBUILD_TESTS=Off \
 $SRC_DIR/$PROJECT \
 && \
 cmake --build . -- -j$COMPILE_CORES

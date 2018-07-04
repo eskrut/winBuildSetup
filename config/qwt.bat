@@ -1,15 +1,13 @@
 ::Setup QWT stuff
 
-set QWT_ROOT=c:\local\qwt
+set QWT_ROOT=%LOCAL_PATH%\qwt
 set QWT_LIB=%QWT_ROOT%\lib
 set QWT_INCLUDE=%QWT_ROOT%\include
 
 ::clean
 
-reg delete "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v QWT_ROOT /f
+reg delete %REG_ENV_KEY% /v QWT_ROOT /f
 
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v QWT_ROOT /t REG_SZ /d "%QWT_ROOT%"
+reg add %REG_ENV_KEY% /v QWT_ROOT /t REG_SZ /d "%QWT_ROOT%"
 
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Environment" /v PATH /t REG_SZ /f /d "%QWT_LIB%;%path%"
-
-call update.env.bat
+set SET_AS_PATH=%QWT_LIB%;%SET_AS_PATH%

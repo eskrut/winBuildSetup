@@ -37,6 +37,7 @@ pacman -S --needed \
 	$arch-gnuplot \
 	$arch-dlib \
 	$arch-proj \
+	$arch-meld3 \
 	zip unzip p7zip
 
 #for downloading large files from gdrive

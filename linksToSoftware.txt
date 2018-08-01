@@ -1,6 +1,8 @@
+#notepad++
 https://notepad-plus-plus.org/download/
 https://www.microsoft.com/ru-RU/download/confirmation.aspx?id=48130
 https://www.visualstudio.com/ru/thank-you-downloading-visual-studio/?sku=Community&rel=15
+#meld
 https://download.gnome.org/binaries/win32/meld/
 
 #dope
@@ -8,7 +10,11 @@ https://drive.google.com/open?id=1tcW-EvwE0TfVZUna2oMQcq-44qu-cgQk
 #uEye 64
 https://drive.google.com/open?id=11rzAUldhfOtt3JcaQcefE1D4EvuC_t5m
 
-
+#gimp
 https://download.gimp.org/mirror/pub/gimp/v2.8/windows/gimp-2.8.22-setup.exe
 
+#screenshot
 https://app.prntscr.com/build/setup-lightshot.exe
+
+#pdf viewer
+https://www.foxitsoftware.com/downloads/

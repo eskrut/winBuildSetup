@@ -1,16 +1,19 @@
 #!/bin/bash
 
-Dir=/c/build/htSoft
+Build=/c/opt/build
+Local=/c/opt/local
+Dir=$Build/htSoft
+Src=/c/opt/src
 Exe=$Dir/htSoft.exe
 deployDir=$Dir/deploy
 
 mkdir -p $deployDir
 
 ./mingw.deploy.sh -v -c \
--d /c/qwt/lib \
--d /c/build/htData \
--d /c/doli/dope/dope \
 -d /mingw32/bin \
+-d $Build/htData \
+-d $Local/qwt/lib \
+-d $Local/doli/lib \
 -w $deployDir \
 $Exe
 
@@ -20,20 +23,20 @@ cp $Exe $deployDir
 
 Exe=$Dir/src/calibration/calibration.exe
 ./mingw.deploy.sh -v \
--d /c/qwt/lib \
--d /c/build/htData \
--d /c/doli/dope/dope \
 -d /mingw32/bin \
+-d $Build/htData \
+-d $Local/qwt/lib \
+-d $Local/doli/lib \
 -w $deployDir \
 $Exe
 windeployqt.exe --release --dir $deployDir $Exe
 cp $Exe $deployDir
 
-Exe=/c/build/fann/src/libdoublefann.dll
-cp -r $Dir/femGrids $deployDir
-cp -r $Dir/results $deployDir
-cp $Dir/ann05_5_2.fann $deployDir
-cp $Dir/fann.ini $deployDir
+Exe=$Local/fann/bin/libdoublefann.dll
+cp -r $Src/htSoft/femGrids $deployDir
+mkdir -p $deployDir/results
+cp $Src/htSoft/ann05_5_2.fann $deployDir
+cp $Src/htSoft/fann.ini $deployDir
 ./mingw.deploy.sh -v \
 -d /c/build/fann/src \
 -d /mingw32/bin \
@@ -41,17 +44,17 @@ cp $Dir/fann.ini $deployDir
 $Exe
 cp $Exe $deployDir
 
-Exe=/c/build/htData/libhtdata.dll
+Exe=$Build/htData/libhtdata.dll
 ./mingw.deploy.sh -v \
--d /c/build/htData \
 -d /mingw32/bin \
+-d $Build/htData \
 -w $deployDir \
 $Exe
 cp $Exe $deployDir
 
-Exe=/c/build/libfem/libfem.dll
+Exe=$Build/libfem/libfem.dll
 ./mingw.deploy.sh -v \
--d /c/build/libfem \
+-d $Build/libfem \
 -d /mingw32/bin \
 -w $deployDir \
 $Exe

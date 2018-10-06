@@ -44,7 +44,7 @@ fi
 
 #echo VERBOSE=$VERBOSE
 #echo HELP=$HELP
-#echo SEARCH_PATH_CMD=$SEARCH_PATH_CMD
+echo SEARCH_PATH_CMD=$SEARCH_PATH_CMD
 
 find_and_copy() {
     for f in "$@"; do
@@ -67,4 +67,5 @@ ntldd $SEARCH_PATH_CMD -R $TARGET | \
 grep -oP "([A-Z]:.*dll)" | \
 sed -e 's/\\/\//g' | \
 awk '{print $1}' | \
-xargs bash -c 'find_and_copy "$@"'
+xargs bash -c 'find_and_copy "$0 $@"'
+#                             ^ xargs feature

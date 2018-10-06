@@ -5,7 +5,7 @@ base=/c/opt
 export PATH=\
 ${base}/build/htData:\
 ${base}/build/libfem:\
-${base}/local/doli/dope/DoPE:\
+${base}/local/doli/lib:\
 ${base}/local/qwt/lib:\
 ${base}/local/fann/bin:\
 $PATH

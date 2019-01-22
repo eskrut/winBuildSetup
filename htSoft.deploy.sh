@@ -17,6 +17,10 @@ mkdir -p $deployDir
 -w $deployDir \
 $Exe
 
+#warkaround
+cp $Local/doli/lib/DoPE.dll $deployDir
+cp $Local/doli/lib/DoDpx.dll $deployDir
+
 windeployqt.exe --release --dir $deployDir $Exe
 
 cp $Exe $deployDir

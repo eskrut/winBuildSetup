@@ -1,0 +1,4 @@
+export BASE_DISK=/c/opt/
+export STUFF_ROOT_DIR=/c/opt/winbuildsetup
+
+export COMPILE_CORES=4

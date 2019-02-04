@@ -7,12 +7,16 @@ fi
 if [ -z "$BASE_DISK" ];
 then
     echo You should provide BASE_DISK env var.
+	echo For example export BASE_DISK=/c/opt/
+	echo It expected to be parent of mingw64, src, build, local, ...
     echo ~/.winbuildrc is the best way to do it
 fi
 
 if [ -z "$STUFF_ROOT_DIR" ];
 then
     echo You should provide STUFF_ROOT_DIR env var.
+	echo For example export STUFF_ROOT_DIR=/c/opt/winbuildsetup
+	echo It expected to point to this git repo
     echo ~/.winbuildrc is the best way to do it
 fi
 

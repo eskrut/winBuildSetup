@@ -1,0 +1,1 @@
+C:\opt\msys64\usr\bin\bash.exe -l -c "export PATH=/mingw32/bin:$PATH && /c/opt/winbuildsetup/qthtSoft.sh &"

@@ -7,6 +7,14 @@ Src=/c/opt/src
 Exe=$Dir/htSoft.exe
 deployDir=$Dir/deploy
 
+pushd $Build/htData
+cmake -DCMAKE_BUILD_TYPE=Release . && cmake --build . --target all -- -j 4
+popd
+
+pushd $Build/htSoft
+cmake -DCMAKE_BUILD_TYPE=Release . && cmake --build . --target all -- -j 4
+popd
+
 mkdir -p $deployDir
 
 ./mingw.deploy.sh -v -c \

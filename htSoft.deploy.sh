@@ -71,3 +71,5 @@ Exe=$Build/libfem/libfem.dll
 -w $deployDir \
 $Exe
 cp $Exe $deployDir
+
+/c/Program\ Files\ \(x86\)/Inno\ Setup\ 5/ISCC $Src/htSoft/deploy.iss

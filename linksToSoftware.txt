@@ -5,6 +5,9 @@ https://www.visualstudio.com/ru/thank-you-downloading-visual-studio/?sku=Communi
 #meld
 https://download.gnome.org/binaries/win32/meld/
 
+#inno setup
+http://jrsoftware.org/download.php/is.exe
+
 #dope
 https://drive.google.com/open?id=1tcW-EvwE0TfVZUna2oMQcq-44qu-cgQk
 #uEye 64

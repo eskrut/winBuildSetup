@@ -1,6 +1,8 @@
 #!/bin/bash
 
-base=/c/opt
+. rc
+
+base=${BASE_DISK}
 
 export PATH=\
 ${base}/build/htData:\

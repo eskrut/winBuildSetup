@@ -44,6 +44,8 @@ fi
 
 #echo VERBOSE=$VERBOSE
 #echo HELP=$HELP
+SEARCH_PATH=$(echo "$SEARCH_PATH" | sed "s/\/\//\//g")
+SEARCH_PATH_CMD=$(echo "$SEARCH_PATH_CMD" | sed "s/\/\//\//g")
 echo SEARCH_PATH_CMD=$SEARCH_PATH_CMD
 
 find_and_copy() {
@@ -53,7 +55,7 @@ find_and_copy() {
         name=`basename $dllname`
         #echo $name $dir ${SEARCH_PATH}
         if [[ ${SEARCH_PATH} =~ (^| )"$dir"($| ) ]] ; then
-            echo $dllname
+            echo "copying" $dllname
             cp $dllname $DEPLOY_DIR
         fi
     done

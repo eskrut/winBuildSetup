@@ -1,18 +1,20 @@
 #!/bin/bash
 
-Build=/c/opt/build
-Local=/c/opt/local
+. rc
+
+Build=${BASE_DISK}/build
+Local=${BASE_DISK}/local
 Dir=$Build/htSoft
-Src=/c/opt/src
+Src=${BASE_DISK}/src
 Exe=$Dir/htSoft.exe
 deployDir=$Dir/deploy
 
 pushd $Build/htData
-cmake -DCMAKE_BUILD_TYPE=Release . && cmake --build . --target all -- -j 4
+cmake -DCMAKE_BUILD_TYPE=Release . && cmake --build . --target all -- -j ${COMPILE_CORES}
 popd
 
 pushd $Build/htSoft
-cmake -DCMAKE_BUILD_TYPE=Release . && cmake --build . --target all -- -j 4
+cmake -DCMAKE_BUILD_TYPE=Release . && cmake --build . --target all -- -j ${COMPILE_CORES}
 popd
 
 mkdir -p $deployDir
@@ -50,7 +52,7 @@ mkdir -p $deployDir/results
 cp $Src/htSoft/ann05_5_2.fann $deployDir
 cp $Src/htSoft/fann.ini $deployDir
 ./mingw.deploy.sh -v \
--d /c/build/fann/src \
+-d ${BASE_DISK}/build/fann/src \
 -d /mingw32/bin \
 -w $deployDir \
 $Exe
@@ -72,4 +74,4 @@ Exe=$Build/libfem/libfem.dll
 $Exe
 cp $Exe $deployDir
 
-/c/Program\ Files\ \(x86\)/Inno\ Setup\ 5/ISCC $Src/htSoft/deploy.iss
+/c/Program\ Files\ \(x86\)/Inno\ Setup\ 6/ISCC htSoft.deploy.iss

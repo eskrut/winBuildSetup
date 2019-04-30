@@ -25,6 +25,7 @@ pacman -S --needed \
 	$arch-hdf5 \
 	$arch-expat \
 	$arch-glew \
+	$arch-freeglut \
 	$arch-gl2ps \
 	$arch-jsoncpp \
 	$arch-libharu \

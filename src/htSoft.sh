@@ -14,6 +14,13 @@ else
     git -C htData submodule foreach --recursive git reset --hard origin/HEAD
 fi
 
+if [ -d "${SRC_DIR}/alglib" ] ; then
+    echo "alglib exist, pulling"
+    git -C alglib pull
+else
+    git clone git@77.244.215.97:cmir/alglib.git
+fi
+
 if [ -d "${SRC_DIR}/htSoft" ] ; then
     echo "htSoft exist, pulling"
     git -C htSoft pull
@@ -26,5 +33,6 @@ else
     git -C htSoft submodule update
     git -C htSoft submodule foreach --recursive git reset --hard origin/HEAD
 fi
+
 
 cd $STUFF_ROOT_DIR

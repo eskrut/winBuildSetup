@@ -9,6 +9,8 @@ cd $BUILD_DIR/$2
 #unfortunately this not working. so this will be actually not a debug info version with	
 #CMAKE_CXX_FLAGS_DEBUG="-O3 -DNDEBUG"
 
+#-DVTK_MODULE_ENABLE_VTK_hdf5=NO added to resolve target collision
+
 cmake \
 	-G "MSYS Makefiles" \
 	-DCMAKE_INSTALL_PREFIX=$INSTALL_DIR/$2 \
@@ -18,9 +20,9 @@ cmake \
 	-DCMAKE_C_COMPILER=gcc \
 	-DCMAKE_CXX_FLAGS=-Wa,-mbig-obj \
 	-DCMAKE_CXX_FLAGS_DEBUG="-O3 -DNDEBUG"\
-	-DVTK_Group_Qt=ON \
+	-DVTK_GROUP_ENABLE_Qt=YES \
 	-DVTK_FORBID_DOWNLOADS=ON \
-	-DVTK_QT_VERSION=5 \
+	-DVTK_MODULE_ENABLE_VTK_hdf5=NO \
 	-DVTK_MODULE_USE_EXTERNAL_VTK_eigen=ON \
 	-DVTK_MODULE_USE_EXTERNAL_VTK_expat=ON \
 	-DVTK_MODULE_USE_EXTERNAL_VTK_freetype=ON \

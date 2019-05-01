@@ -1,6 +1,9 @@
 . ./rc
 
-patch $SRC_DIR/qwt/qwtconfig.pri patches/qwtconfig.patch
+cp patches/qwtconfig.patch .local/qwtconfig.patch
+sed -i 's/c:\/opt\/local/'$DISK_LABEL':\/'$DISK_SUFFIX'\/local/g' .local/qwtconfig.patch
+
+patch $SRC_DIR/qwt/qwtconfig.pri .local/qwtconfig.patch
 
 PROJECT=qwt
 

@@ -1,5 +1,9 @@
 #notepad++
 https://notepad-plus-plus.org/download/
+
+#broweser
+https://www.google.com/chrome/
+
 https://www.microsoft.com/ru-RU/download/confirmation.aspx?id=48130
 https://www.visualstudio.com/ru/thank-you-downloading-visual-studio/?sku=Community&rel=15
 #meld

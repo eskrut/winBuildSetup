@@ -34,7 +34,7 @@ cp $Local/doli/lib/DoDpx.dll $deployDir
 windeployqt.exe --release --dir $deployDir $Exe
 
 cp $Exe $deployDir
-
+	
 Exe=$Dir/src/calibration/calibration.exe
 ./mingw.deploy.sh -v \
 -d /mingw32/bin \
@@ -74,4 +74,4 @@ Exe=$Build/libfem/libfem.dll
 $Exe
 cp $Exe $deployDir
 
-/c/Program\ Files\ \(x86\)/Inno\ Setup\ 6/ISCC htSoft.deploy.iss
+/c/Program\ Files\ \(x86\)/Inno\ Setup\ 6/ISCC .local/htSoft.deploy.iss

@@ -27,4 +27,7 @@ $SRC_DIR/$PROJECT \
 && \
 cmake --build . -- -j$COMPILE_CORES
 
+#copy mandatory runtime files from htSoft src dir
+cp -r $SRC_DIR/$PROJECT/femGrids ann05_5_2.fann fann.ini ./
+
 cd $STUFF_ROOT_DIR

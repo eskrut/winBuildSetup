@@ -33,9 +33,13 @@ pacman -Scc
 
 ./install/doli.sh
 ./install/uEye.sh
+./install/qt.sh
+#qtBatch script will appear at local folder
+#need to adjust cmake generator to MSYS
 
 ./config/git.sh
 ./config/ssh.sh
+./config/iss.sh
 
 #copy pub key to git repos
 
@@ -45,10 +49,5 @@ pacman -Scc
 #^ remote ssh host confirmation needed
 #^ git flow confirmation needed several times
 
-#patching hardcoded paths
-#qwt done in build script
-#deploy
-
 #try build all
 ./builds.sh
-

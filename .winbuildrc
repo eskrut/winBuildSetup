@@ -1,4 +1,6 @@
-export BASE_DISK=/c/opt/
+export DISK_LABEL=c
+export DISK_SUFFIX=opt
 export STUFF_ROOT_DIR=/c/opt/winbuildsetup
+export BASE_DISK=/${DISK_LABEL}/${DISK_SUFFIX}/
 
 export COMPILE_CORES=4

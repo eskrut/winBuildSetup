@@ -44,9 +44,11 @@ fi
 
 #echo VERBOSE=$VERBOSE
 #echo HELP=$HELP
+SEARCH_PATH=$(echo "$SEARCH_PATH" | sed "s/\/\/\/\//\//g")
+SEARCH_PATH=$(echo "$SEARCH_PATH" | sed "s/\/\/\//\//g")
 SEARCH_PATH=$(echo "$SEARCH_PATH" | sed "s/\/\//\//g")
 SEARCH_PATH_CMD=$(echo "$SEARCH_PATH_CMD" | sed "s/\/\//\//g")
-echo SEARCH_PATH_CMD=$SEARCH_PATH_CMD
+echo SEARCH_PATH=$SEARCH_PATH
 
 find_and_copy() {
     for f in "$@"; do

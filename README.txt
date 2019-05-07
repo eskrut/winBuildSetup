@@ -26,10 +26,12 @@ pacman -Suuyy
 
 ./install/packages_32.sh
 
-#^ this will be long... 
+#^ this will be long...
 
 #cleanup things
 pacman -Scc
+
+mkdir .local
 
 ./install/doli.sh
 ./install/uEye.sh

@@ -14,4 +14,5 @@ $PATH
 
 export PATH=${base}/local/vtkd/bin:$PATH
 
+
 qtcreator &

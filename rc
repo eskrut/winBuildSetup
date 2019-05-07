@@ -4,11 +4,20 @@ then
 	. ~/.winbuildrc
 fi
 
-if [ -z "$BASE_DISK" ];
+if [ -z "$DISK_LABEL" ];
 then
-    echo You should provide BASE_DISK env var.
-	echo For example export BASE_DISK=/c/opt/
-	echo It expected to be parent of mingw64, src, build, local, ...
+    echo You should provide DISK_LABEL env var.
+	echo For example export DISK_LABEL=c
+	echo It expected to be single letter of win disk 
+    echo ~/.winbuildrc is the best way to do it
+fi
+
+if [ -z "$DISK_SUFFIX" ];
+then
+    echo You should provide DISK_SUFFIX env var.
+	echo For example export DISK_SUFFIX=opt
+	echo It expected to be suffix which when appended to DISK_LABEL
+	echo forms a path to dirs src, build, local, ...
     echo ~/.winbuildrc is the best way to do it
 fi
 
@@ -20,10 +29,28 @@ then
     echo ~/.winbuildrc is the best way to do it
 fi
 
+#cleaning slashes
+function fixPath()
+{
+        local inputVar=$1
+        local varValue=${!1}
+        eval $1=${varValue//\/\//\/}
+}
+fixPath BASE_DISK && fixPath BASE_DISK && fixPath BASE_DISK && fixPath BASE_DISK && fixPath BASE_DISK
+fixPath STUFF_ROOT_DIR && fixPath STUFF_ROOT_DIR && fixPath STUFF_ROOT_DIR && fixPath STUFF_ROOT_DIR && fixPath STUFF_ROOT_DIR
+export BASE_DISK=${BASE_DISK%/}
+export STUFF_ROOT_DIR=${STUFF_ROOT_DIR%/}
+
 export SRC_DIR=$BASE_DISK/src
 export BUILD_DIR=$BASE_DISK/build
 export INSTALL_DIR=$BASE_DISK/local
 export LOCAL_DIR=$INSTALL_DIR
+export WIN_BASE_DISK=${DISK_LABEL}:\\\\${DISK_SUFFIX}
+#                                   ^ needed for sed operations
+
+#echo BASE_DISK=$BASE_DISK
+#echo STUFF_ROOT_DIR=$STUFF_ROOT_DIR
+#echo WIN_BASE_DISK=$WIN_BASE_DISK
 
 if [ -z "$COMPILE_CORES" ];
 then

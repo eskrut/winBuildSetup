@@ -20,7 +20,14 @@ find_library ( HTDATA_LIBRARY
   PATH_SUFFIXES htData
 )
 
+find_library ( HTDATA_LIBRARY_DEBUG
+  NAMES htdatad
+  PATHS $ENV{BUILD_DIR}
+  PATH_SUFFIXES htData htDatad
+)
+
 set ( HTDATA_LIBRARIES ${HTDATA_LIBRARY} )
+set ( HTDATA_LIBRARIES_DEBUG ${HTDATA_LIBRARY_DEBUG} )
 
 # try to guess root dir from include dir
 if ( HTDATA_INCLUDE_DIR )
@@ -35,12 +42,14 @@ include ( FindPackageHandleStandardArgs )
 if ( CMAKE_VERSION LESS 2.8.3 )
   find_package_handle_standard_args( htdata DEFAULT_MSG HTDATA_LIBRARY HTDATA_INCLUDE_DIR )
 else ()
-  find_package_handle_standard_args( htdata REQUIRED_VARS HTDATA_LIBRARY HTDATA_INCLUDE_DIR  )
+  find_package_handle_standard_args( htdata REQUIRED_VARS HTDATA_LIBRARY HTDATA_LIBRARY_DEBUG HTDATA_LIBRARIES HTDATA_LIBRARIES_DEBUG HTDATA_INCLUDE_DIR  )
 endif ()
 
 mark_as_advanced (
   HTDATA_LIBRARY 
   HTDATA_LIBRARIES
+  HTDATA_LIBRARY_DEBUG 
+  HTDATA_LIBRARIES_DEBUG
   HTDATA_INCLUDE_DIR
   HTDATA_INCLUDE_DIRS
   HTDATA_ROOT_DIR

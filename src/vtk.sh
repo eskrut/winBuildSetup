@@ -7,6 +7,7 @@ if [ -d "${SRC_DIR}/vtk" ] ; then
 else
   #git clone https://github.com/Kitware/VTK.git
   # wget https://github.com/Kitware/VTK/archive/v8.0.0.zip -O vtk.zip
+  # wget https://github.com/Kitware/VTK/archive/v8.2.0.zip -O vtk.zip
   wget https://github.com/Kitware/VTK/archive/master.zip -O vtk.zip
   unzip vtk.zip -d ./
   mv VTK-master vtk

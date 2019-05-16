@@ -6,10 +6,9 @@ mkdir -p $BUILD_DIR/$2
 cd $BUILD_DIR/$2
 
 #CMAKE_CXX_COMPILER=g++ CMAKE_CXX_FLAGS=-Wa,-mbig-obj added to pass assembler error too many sections
-#unfortunately this not working. so this will be actually not a debug info version with	
-#CMAKE_CXX_FLAGS_DEBUG="-O3 -DNDEBUG"
 
 #-DVTK_MODULE_ENABLE_VTK_hdf5=NO added to resolve target collision
+#-DVTK_MODULE_USE_EXTERNAL_VTK_glew=OFF since some strange Marefile generation
 
 cmake \
 	-G "MSYS Makefiles" \
@@ -19,14 +18,15 @@ cmake \
 	-DCMAKE_CXX_COMPILER=g++ \
 	-DCMAKE_C_COMPILER=gcc \
 	-DCMAKE_CXX_FLAGS=-Wa,-mbig-obj \
-	-DCMAKE_CXX_FLAGS_DEBUG="-O3 -DNDEBUG"\
 	-DVTK_GROUP_ENABLE_Qt=YES \
 	-DVTK_FORBID_DOWNLOADS=ON \
 	-DVTK_MODULE_ENABLE_VTK_hdf5=NO \
+	-DVTK_MODULE_ENABLE_VTK_PythonInterpretter=NO \
+	-DVTK_MODULE_ENABLE_VTK_WrappingPythonCore=NO \
 	-DVTK_MODULE_USE_EXTERNAL_VTK_eigen=ON \
 	-DVTK_MODULE_USE_EXTERNAL_VTK_expat=ON \
 	-DVTK_MODULE_USE_EXTERNAL_VTK_freetype=ON \
-	-DVTK_MODULE_USE_EXTERNAL_VTK_glew=ON \
+	-DVTK_MODULE_USE_EXTERNAL_VTK_glew=OFF \
 	-DVTK_MODULE_USE_EXTERNAL_VTK_hdf5=ON \
 	-DVTK_MODULE_USE_EXTERNAL_VTK_jpeg=ON \
 	-DVTK_MODULE_USE_EXTERNAL_VTK_jsoncpp=ON \

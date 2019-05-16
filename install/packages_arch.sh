@@ -43,3 +43,6 @@ pacman -S --needed \
 #for downloading large files from gdrive
 pip install gdown
 pip install six
+
+#remove msys gdb
+pacman -R gdb

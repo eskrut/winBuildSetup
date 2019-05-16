@@ -1,0 +1,1 @@
+./build/htSoft.sh Debug d

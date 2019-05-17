@@ -24,6 +24,7 @@ mkdir -p $deployDir
 -d $Build/htData \
 -d $Local/qwt/lib \
 -d $Local/doli/lib \
+-d $Local/vtk/bin \
 -w $deployDir \
 $Exe
 
@@ -41,6 +42,7 @@ Exe=$Dir/src/calibration/calibration.exe
 -d $Build/htData \
 -d $Local/qwt/lib \
 -d $Local/doli/lib \
+-d $Local/vtk/bin \
 -w $deployDir \
 $Exe
 windeployqt.exe --release --dir $deployDir $Exe
